@@ -1,13 +1,15 @@
+import ninja
+
 class Pet:
     # ! Class Attributes
     health = 100
     energy = 100
 
     # implement the following attributes with the constructor/initializer
-    def __init__(self, name, type, tricks):
-        self.name = name
-        self.type = type
-        self.tricks = tricks
+    def __init__(self, dict):
+        self.name = dict["name"]
+        self.type = dict["type"]
+        self.tricks = dict["tricks"]
 
     def add_health(self,health):
         self.health = self.health + health

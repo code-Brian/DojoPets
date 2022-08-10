@@ -12,16 +12,25 @@ class Pet:
     # implement the following methods:
     def sleep(self):
         # increases the pet's energy by 25
-        print("The pet is sleeping and its health is increased by 25")
+        previous_energy = self.energy
+        self.energy = self.energy + 25
+        print(f"{self.name}'s energy was at {previous_energy}. After resting, energy is now at {self.energy}")
+        return self
 
     def eat(self):
         # increases the pet's energy by 5 and health by 10. 
-        print("The pet is eating and its energy is increased by 5 and health is increased by 10")
+        previous_energy = self.energy
+        previous_health = self.health
+        self.energy = self.energy + 5
+        self.health = self.health + 10
+        print(f"{self.name}'s energy was {previous_energy}. Health was {previous_health}.\nAfter eating, energy is now {self.energy} and health is {self.health}")
 
     def play(self):
         # increases the pet's health by 5.
-        print("The pet is playing and its health is increased by 5")
+        previous_health = self.health
+        self.health = self.health + 5
+        print(f"{self.name}'s health was {previous_health}. After playing, health is now {self.health}")
 
-    def noise(self):
+    def noise(self, sound):
         # prints out the pet's sound
-        print("The pet is making its sound! Aww! How cute!")
+        print(f"{self.name} says: {sound}")

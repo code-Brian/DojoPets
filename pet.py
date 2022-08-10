@@ -43,3 +43,13 @@ class Pet:
     def noise(self, sound):
         # prints out the pet's sound
         print(f"{self.name} says: {sound}")
+
+# good code should be like a good cabernet DRY
+# here's how super works
+class Dog(Pet):
+    def __init__(self, dict):
+        super().__init__(dict)
+    
+    def dog_method(self):
+        print("This is unique to dog")
+        return self

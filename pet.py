@@ -55,3 +55,6 @@ class Dog(Pet):
     def dog_method(self):
         print("This is unique to dog")
         return self
+    
+    def chase_tail(self):
+        print(f"{self.name} is chasing their tail!")

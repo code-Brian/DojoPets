@@ -13,6 +13,13 @@ first_pet = {
     "sound": "Bark! Bark!"
 }
 
+second_pet = {
+    "name":"Joules",
+    "type": "Dog", 
+    "tricks": ["Sit", "Snuggle","Touch"],
+    "sound": "Awoo! Bork! Bork! Awoooooowowowooo!"
+}
+
 ninja_brian = {
     "first_name":"Brian",
     "last_name":"Denmark",
@@ -23,3 +30,6 @@ ninja_brian = {
 brian = ninja.Ninja(ninja_brian, first_pet)
 print(brian.ninjaPet.type)
 brian.walk().feed().bathe()
+
+joules = pet.Dog(second_pet)
+joules.chase_tail()

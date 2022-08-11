@@ -10,6 +10,7 @@ class Pet:
         self.name = dict["name"]
         self.type = dict["type"]
         self.tricks = dict["tricks"]
+        self.sound = dict["sound"]
 
     def add_health(self,health):
         self.health = self.health + health
@@ -40,9 +41,10 @@ class Pet:
         self.add_health(5)
         return self
 
-    def noise(self, sound):
+    def noise(self):
         # prints out the pet's sound
-        print(f"{self.name} says: {sound}")
+        print(f"{self.name} says: {self.sound}")
+        return self
 
 # good code should be like a good cabernet DRY
 # here's how super works
